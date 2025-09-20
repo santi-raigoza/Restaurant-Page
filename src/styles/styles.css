@@ -159,3 +159,31 @@ button {
 }
 
 /* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--hotPink);
+    width: 100%;
+    padding: 2rem 0;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-icon-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: white;
+}
