@@ -61,6 +61,7 @@ button {
     width: 100%;
     border-bottom: solid 2px var(--deepPink);
     padding: 1rem;
+    gap: 8rem;
 }
 
 .header > div {
@@ -104,10 +105,11 @@ button {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    height: calc(100vh - 100px - 3rem); /* fill viewport minus header */
+    padding: 4rem 2rem;
     border: 2px solid var(--deepPink);
     border-radius: 25px;
     background-color: white;
+    text-align: center;
 }
 
 .restaurant-content h2 {
@@ -129,14 +131,12 @@ button {
     padding: 1rem 2rem;
     background-color: var(--hotPink);
     color: white;
-
 }
 
 .Tinkaton-dinner-img {
     border: 2px solid var(--deepPink);
     height: 400px;
-    /* width: 50%; */
-    width: clamp(500px, 50%, 1000px);
+    width: clamp(600px, 50%, 1000px);
     border-radius: 25px;
 }
 
