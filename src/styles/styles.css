@@ -4,6 +4,7 @@
     --lightPink: #FFB6C1;
     --hotPink: #FF69B4;
     --deepPink: #FF1493;
+    --grey: #C0C0C0;
 }
 
 /* Css Reset */
@@ -30,10 +31,6 @@ input, button, textarea, select {
 }
 
 /* Utils */
-/* html, body {
-    min-height: 100%;
-} */
-
 body {
     font-family: "Lato", sans-serif;
     font-weight: 300;
@@ -98,14 +95,47 @@ button {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-color: var(--lightPink);
 }
 
 .restaurant-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     height: calc(100vh - 100px - 3rem); /* fill viewport minus header */
-    border: 1px solid black;
+    border: 1px solid var(--deepPink);
+    border-radius: 25px;
+    background-color: white;
 }
 
-/* .Tinkaton-dinner-img {
-    height: 500px;
-    width: 80%;
-} */
+.restaurant-content h2 {
+    font-size: 3.5rem;
+    color: var(--hotPink);
+}
+
+.restaurant-content p {
+    font-size: 1.3rem;
+    color: #666;
+    font-style: italic;
+}
+
+.restaurant-content button {
+    border: 2px solid var(--lightPink);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    background-color: var(--hotPink);
+    color: white;
+
+}
+
+.Tinkaton-dinner-img {
+    height: 400px;
+    width: 50%;
+    border-radius: 25px;
+}
+
+
