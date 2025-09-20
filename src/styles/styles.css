@@ -30,6 +30,9 @@ input, button, textarea, select {
 }
 
 /* Utils */
+/* html, body {
+    min-height: 100%;
+} */
 
 body {
     font-family: "Lato", sans-serif;
@@ -49,6 +52,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
 /* Header */
@@ -87,5 +91,21 @@ button {
 }
 
 /* Content */
+#content {
+    flex: 1;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
+.restaurant-content {
+    height: calc(100vh - 100px - 3rem); /* fill viewport minus header */
+    border: 1px solid black;
+}
 
+/* .Tinkaton-dinner-img {
+    height: 500px;
+    width: 80%;
+} */
