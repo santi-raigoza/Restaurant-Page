@@ -59,7 +59,7 @@ button {
     justify-content: space-between;
     height: 100px;
     width: 100%;
-    border-bottom: solid 1px var(--deepPink);
+    border-bottom: solid 2px var(--deepPink);
     padding: 1rem;
 }
 
@@ -105,7 +105,7 @@ button {
     justify-content: center;
     gap: 1rem;
     height: calc(100vh - 100px - 3rem); /* fill viewport minus header */
-    border: 1px solid var(--deepPink);
+    border: 2px solid var(--deepPink);
     border-radius: 25px;
     background-color: white;
 }
@@ -133,9 +133,29 @@ button {
 }
 
 .Tinkaton-dinner-img {
+    border: 2px solid var(--deepPink);
     height: 400px;
-    width: 50%;
+    /* width: 50%; */
+    width: clamp(500px, 50%, 1000px);
     border-radius: 25px;
 }
 
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
 
+.feature-card {
+    border: 2px solid var(--deepPink);
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
