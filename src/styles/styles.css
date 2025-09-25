@@ -44,14 +44,6 @@ button {
     background: none;
 }
 
-/* Main Container */
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
-
 /* Header */
 .header {
     display: flex;
