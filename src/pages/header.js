@@ -1,6 +1,5 @@
 import tinkatonHammerLogo from "../assets/imgs/TinkatonsHammer.png";
 
-// create the header
 const header = function() {
     const header = document.querySelector(".header");
 
@@ -44,7 +43,6 @@ const header = function() {
 
     header.appendChild(logoContainer);
     header.appendChild(navBar);
-
 }
 
 export default header;

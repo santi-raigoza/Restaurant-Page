@@ -1,5 +1,7 @@
 import "./styles/styles.css";
-import header from './pages/header.js';
+import header from "./pages/header.js";
+import home from "./pages/home.js";
+import footer from "./pages/footer.js";
 
 
 const homeButton = document.getElementById("home-btn");
@@ -9,11 +11,12 @@ const reservationButton = document.getElementById("reserve-btn");
 
 document.addEventListener("DOMContentLoaded", function() {
     header();
+    home();
+    footer();
 });
 
 homeButton.addEventListener("click", function() {
     // code
-    // home()  import home from home.js
 });
 
 menuButton.addEventListener("click", function() {
