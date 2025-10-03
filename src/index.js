@@ -1,11 +1,13 @@
 import "./styles/styles.css"; // global CSS
 import "./styles/home.css";
 import "./styles/menu.css";
+import "./styles/contact.css";
 
 import header from "./pages/header.js";
 import footer from "./pages/footer.js";
 import home from "./pages/home.js";
 import menu from "./pages/menu.js";
+import contact from "./pages/contact.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     header();
@@ -28,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     contactButton.addEventListener("click", function() {
-        // contact();
+        contact();
     });
 
     reservationButton.addEventListener("click", function() {
