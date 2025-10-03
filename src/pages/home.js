@@ -3,7 +3,11 @@ import tinkatonDinner from "../assets/imgs/TinkatonDinner.png";
 const home = function() {
   const content = document.getElementById("content");
 
+  // Clear content
   content.textContent = "";
+
+  const homeContainer = document.createElement("div");
+  homeContainer.className = "home-container";
 
   const restaurantContent = document.createElement("div");
   restaurantContent.className = "restaurant-content";
@@ -26,12 +30,12 @@ const home = function() {
   button.textContent = "Smash Into Our Menu!";
   restaurantContent.appendChild(button);
 
-  content.appendChild(restaurantContent);
+  homeContainer.appendChild(restaurantContent);
 
+  // Features
   const features = document.createElement("div");
   features.className = "features";
 
-  // Array of feature cards
   const featureData = [
     {
       title: "Hammer-Crafted Dishes",
@@ -63,7 +67,9 @@ const home = function() {
     features.appendChild(card);
   });
 
-  content.appendChild(features);
+  homeContainer.appendChild(features);
+
+  content.appendChild(homeContainer);
 };
 
 export default home;

@@ -1,0 +1,96 @@
+/* Menu Page Styles */
+.menu-container {
+    padding: 0 2rem;
+}
+
+.anti-corviknight-section {
+    color: var(--lavender);
+    padding: 2rem;
+    border-radius: 20px;
+    margin: 2rem 0;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.4);
+    border: 3px solid var(--hotPink);
+    background-color: var(--lightPink);
+}
+
+.anti-corviknight-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.anti-corviknight-section p {
+   font-weight: bold;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.menu-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+    border: 3px solid var(--lightPink);
+    transition: all 0.3s ease;
+}
+
+.menu-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+}
+
+.menu-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--deepPink); 
+    text-align: center;
+    border-bottom: 2px solid var(--lightPink);
+    padding-bottom: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--lightPink);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background: rgba(255, 182, 193, 0.1);
+    padding-left: 0.5rem;
+    border-radius: 10px;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-name {
+    font-weight: bold;
+    color: var(--deepPink);
+    font-size: 1.1rem;
+}
+
+.menu-item-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.3rem;
+    line-height: 1.3;
+}
+
+.menu-item-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--deepPink); 
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    margin-left: 1rem;
+}

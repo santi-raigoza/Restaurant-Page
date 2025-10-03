@@ -4,7 +4,7 @@
     --lightPink: #FFB6C1;
     --hotPink: #FF69B4;
     --deepPink: #FF1493;
-    --grey: #C0C0C0;
+    --lavender: #E6E6FA;
 }
 
 /* Css Reset */
@@ -78,76 +78,6 @@ button {
 
 .poke-cafe-logo {
     height: 90px;
-}
-
-/* Content */
-#content {
-    flex: 1;
-    padding: 2rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    background-color: var(--lightPink);
-}
-
-.restaurant-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 4rem 2rem;
-    border: 2px solid var(--deepPink);
-    border-radius: 25px;
-    background-color: white;
-    text-align: center;
-}
-
-.restaurant-content h2 {
-    font-size: 3.5rem;
-    color: var(--hotPink);
-}
-
-.restaurant-content p {
-    font-size: 1.3rem;
-    color: #666;
-    font-style: italic;
-}
-
-.restaurant-content button {
-    border: 2px solid var(--lightPink);
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
-    background-color: var(--hotPink);
-    color: white;
-}
-
-.Tinkaton-dinner-img {
-    border: 2px solid var(--deepPink);
-    height: 400px;
-    width: clamp(600px, 50%, 1000px);
-    border-radius: 25px;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.feature-card {
-    border: 2px solid var(--deepPink);
-    padding: 2rem;
-    border-radius: 20px;
-    background-color: white;
-    font-size: 20px;
-}
-
-.feature-card h3 {
-    margin-bottom: 1rem;
 }
 
 /* Footer */

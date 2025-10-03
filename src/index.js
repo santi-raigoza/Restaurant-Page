@@ -1,32 +1,37 @@
-import "./styles/styles.css";
+import "./styles/styles.css"; // global CSS
+import "./styles/home.css";
+import "./styles/menu.css";
+
 import header from "./pages/header.js";
-import home from "./pages/home.js";
 import footer from "./pages/footer.js";
-
-
-const homeButton = document.getElementById("home-btn");
-const menuButton = document.getElementById("menu-btn");
-const contactButton = document.getElementById("contact-btn");
-const reservationButton = document.getElementById("reserve-btn");
+import home from "./pages/home.js";
+import menu from "./pages/menu.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     header();
     home();
     footer();
-});
+    
+    // get the button references after header is created
+    const homeButton = document.getElementById("home-btn");
+    const menuButton = document.getElementById("menu-btn");
+    const contactButton = document.getElementById("contact-btn");
+    const reservationButton = document.getElementById("reserve-btn");
+    
+    // Add event listeners
+    homeButton.addEventListener("click", function() {
+        home();
+    });
 
-homeButton.addEventListener("click", function() {
-    // code
-});
+    menuButton.addEventListener("click", function() {
+        menu();
+    });
 
-menuButton.addEventListener("click", function() {
-    // code
-});
+    contactButton.addEventListener("click", function() {
+        // contact();
+    });
 
-contactButton.addEventListener("click", function() {
-    // code  
-});
-
-reservationButton.addEventListener("click", function() {
-    // code
+    reservationButton.addEventListener("click", function() {
+        // reservations();
+    });
 });
