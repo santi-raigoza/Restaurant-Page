@@ -1,0 +1,32 @@
+/* Reservation page styling */
+/* Reuses contact.css styling */
+.reservation-container {
+    padding: 1rem 2rem;
+}
+
+.reservation-title {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--deepPink);
+    margin-bottom: 2rem;
+}
+
+.corviknight-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.corviknight-group input[type="checkbox"] {
+    width: auto;
+}
+
+.corviknight-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    color: #666;
+}
+
+.reservation-policy {
+    margin-top: 2rem;
+}

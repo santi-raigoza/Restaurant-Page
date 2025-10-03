@@ -44,6 +44,10 @@ button {
     background: none;
 }
 
+textarea {
+    resize: none;
+}
+
 /* Header */
 .header {
     display: flex;

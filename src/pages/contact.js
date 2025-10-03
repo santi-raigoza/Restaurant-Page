@@ -2,79 +2,76 @@ const contact = function() {
   const content = document.getElementById("content");
   content.textContent = "";
 
-  // Page-specific wrapper
-  const contactWrapper = document.createElement("div");
-  contactWrapper.className = "contact-container";
+  const contactContainer = document.createElement("div");
+  contactContainer.className = "contact-container";
 
-  // Page title
   const contactTitle = document.createElement("h2");
   contactTitle.className = "contact-title";
   contactTitle.textContent = "Contact Our Hammer Wielders";
-  contactWrapper.appendChild(contactTitle);
+  contactContainer.appendChild(contactTitle);
 
-  // Contact info grid
   const contactInfo = document.createElement("div");
   contactInfo.className = "contact-info";
 
-  // Location card
-  const locationCard = document.createElement("div");
-  locationCard.className = "contact-card";
-  
-  const locationIcon = document.createElement("h3");
-  locationIcon.textContent = "Location";
-  locationCard.appendChild(locationIcon);
-  
-  const locationText = document.createElement("p");
-  locationText.innerHTML = "123 Steel Fairy Lane<br>Galar Region, Paldea 54321<br>(Far from any Corviknight nests!)";
-  locationCard.appendChild(locationText);
-  
+  // Helper function to create cards
+  function createCard(title, lines) {
+    const card = document.createElement("div");
+    card.className = "contact-card";
+
+    const cardTitle = document.createElement("h3");
+    cardTitle.textContent = title;
+    card.appendChild(cardTitle);
+
+    const cardText = document.createElement("p");
+    lines.forEach((line, index) => {
+      cardText.appendChild(document.createTextNode(line));
+      if (index < lines.length - 1) {
+        cardText.appendChild(document.createElement("br"));
+      }
+    });
+    card.appendChild(cardText);
+
+    return card;
+  }
+
+  const locationCard = createCard("Location", [
+    "123 Steel Fairy Lane",
+    "Galar Region, Paldea 54321",
+    "(Far from any Corviknight nests!)"
+  ]);
+
+  const phoneCard = createCard("Phone", [
+    "(555) TINKATON",
+    "(555) 846-5286",
+    "No Corviknight calls accepted!"
+  ]);
+
+  const hoursCard = createCard("Hours", [
+    "Monday - Thursday: 11am - 10pm",
+    "Friday - Saturday: 11am - 11pm",
+    "Sunday: 12pm - 9pm",
+    "Closed during Corviknight migrations"
+  ]);
+
   contactInfo.appendChild(locationCard);
-
-  // Phone card
-  const phoneCard = document.createElement("div");
-  phoneCard.className = "contact-card";
-  
-  const phoneIcon = document.createElement("h3");
-  phoneIcon.textContent = "Phone";
-  phoneCard.appendChild(phoneIcon);
-  
-  const phoneText = document.createElement("p");
-  phoneText.innerHTML = "(555) TINKATON<br>(555) 846-5286<br>No Corviknight calls accepted!";
-  phoneCard.appendChild(phoneText);
-  
   contactInfo.appendChild(phoneCard);
-
-  // Hours card
-  const hoursCard = document.createElement("div");
-  hoursCard.className = "contact-card";
-  
-  const hoursIcon = document.createElement("h3");
-  hoursIcon.textContent = "Hours";
-  hoursCard.appendChild(hoursIcon);
-  
-  const hoursText = document.createElement("p");
-  hoursText.innerHTML = "Monday - Thursday: 11am - 10pm<br>Friday - Saturday: 11am - 11pm<br>Sunday: 12pm - 9pm<br>Closed during Corviknight migrations";
-  hoursCard.appendChild(hoursText);
-  
   contactInfo.appendChild(hoursCard);
 
-  contactWrapper.appendChild(contactInfo);
+  contactContainer.appendChild(contactInfo);
 
-  // Contact form
+  // Form Container
   const formContainer = document.createElement("div");
   formContainer.className = "form-container";
 
   const formTitle = document.createElement("h3");
+  formTitle.className = "form-title";
   formTitle.textContent = "Send Us a Message!";
-  formTitle.style.textAlign = "center";
-  formTitle.style.marginBottom = "1.5rem";
-  formTitle.style.color = "var(--deepPink)";
   formContainer.appendChild(formTitle);
 
   const form = document.createElement("form");
   form.id = "contact-form";
 
-  // Name field
+  // Name Field
   const nameGroup = document.createElement("div");
   nameGroup.className = "form-group";
   
@@ -92,7 +89,7 @@ const contact = function() {
   
   form.appendChild(nameGroup);
 
-  // Email field
+  // Email Field
   const emailGroup = document.createElement("div");
   emailGroup.className = "form-group";
   
@@ -110,7 +107,7 @@ const contact = function() {
   
   form.appendChild(emailGroup);
 
-  // Favorite Pokemon field
+  // Pokemon Field
   const pokemonGroup = document.createElement("div");
   pokemonGroup.className = "form-group";
   
@@ -128,7 +125,7 @@ const contact = function() {
   
   form.appendChild(pokemonGroup);
 
-  // Message field
+  // Message Field
   const messageGroup = document.createElement("div");
   messageGroup.className = "form-group";
   
@@ -146,7 +143,7 @@ const contact = function() {
   
   form.appendChild(messageGroup);
 
-  // Submit button
+  // Submit Button
   const submitBtn = document.createElement("button");
   submitBtn.type = "submit";
   submitBtn.className = "submit-btn";
@@ -173,9 +170,9 @@ const contact = function() {
   });
 
   formContainer.appendChild(form);
-  contactWrapper.appendChild(formContainer);
+  contactContainer.appendChild(formContainer);
 
-  // Anti-Corviknight notice
+  // Anti-Corviknight Notice
   const notice = document.createElement("div");
   notice.className = "anti-corviknight-section";
   
@@ -187,9 +184,9 @@ const contact = function() {
   noticeText.textContent = "Any inquiries from Corviknight trainers will be immediately bonked and deleted. No exceptions!";
   notice.appendChild(noticeText);
   
-  contactWrapper.appendChild(notice);
+  contactContainer.appendChild(notice);
 
-  content.appendChild(contactWrapper);
+  content.appendChild(contactContainer);
 };
 
 export default contact;
