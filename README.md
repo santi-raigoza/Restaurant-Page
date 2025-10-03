@@ -2,7 +2,7 @@
 
 Welcome to **The Tinkaton Hammer** – a fully dynamic, single-page restaurant website built entirely with **JavaScript**. 
 
-## 🚀 Features
+## Features
 - Fully dynamic content generated through JavaScript modules.
 - Tabbed navigation for **Home**, **Menu**, **Contact**, and **Reservation** pages.
 - Modular code structure for easy maintenance and scalability.
